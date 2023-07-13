@@ -4,8 +4,10 @@ import App from "../src/App";
 describe('App', () => {
 	it('renders headline', () => {
 		render(<App />);
-		const headline = screen.getByText(/It works and you found me!/i);
-		expect(headline).toBeInTheDocument();
+		const usernameLabel = screen.getByText("Username");
+		const passwordLabel = screen.getByText("Password");
+		expect(usernameLabel).toBeInTheDocument();
+		expect(passwordLabel).toBeInTheDocument();
 	});
 });
 
