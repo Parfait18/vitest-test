@@ -45,7 +45,7 @@ function App() {
 								{errors.password && <p className="text-red-500 text-xs italic">Please choose a password</p>}
 							</div>
 							<div className="flex items-center justify-between">
-								<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+								<button data-testid="sign-in" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
 									Sign In
 								</button>
 							</div>
