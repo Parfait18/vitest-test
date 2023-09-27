@@ -1,8 +1,10 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
 }
+html, body, #app, #app>div {
+  height: 100%
+}
+
 
 .card {
   padding: 2em;

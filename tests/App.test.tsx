@@ -28,6 +28,7 @@ describe('App', () => {
 		expect(await screen.findByText(/Please choose a username/i)).toBeInTheDocument();
 	});
 
+
 	test('displays an error message for empty password', async () => {
 		render(<App />);
 
@@ -40,8 +41,7 @@ describe('App', () => {
 	});
 
 	test('submits the form with valid username and password', () => {
-	const { onSubmit } = render(<App />);
-
+		 render(<App />);
 		fireEvent.change(screen.getByLabelText('Username'), {
 			target: { value: 'testuser' },
 		});
@@ -51,7 +51,7 @@ describe('App', () => {
 		fireEvent.click(screen.getByText('Sign In'));
 
 		//Test if onSubmit function is called once
-		expect(onSubmit).toHaveBeenCalledWith({
+		expect(console.log).toHaveBeenCalledWith({
 			username: 'testuser',
 			password: 'testpassword',
 		});
@@ -59,4 +59,4 @@ describe('App', () => {
 });
 
 
-
+	
